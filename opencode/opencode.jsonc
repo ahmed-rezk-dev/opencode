@@ -1,8 +1,9 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "google-vertex/gemini-3-pro-preview",
+  "model": "opencode/big-pickle",
+  "default_agent": "agent-organizer",
   "small_model": "openrouter/gpt-5-1-codex-mini",
-  "enabled_providers": ["google-vertex", "openrouter"],
+  // "enabled_providers": ["google-vertex", "openrouter"],
   // "enabled_models": {
   //   "google-vertex": ["gemini-3*", "gemini-2*"],
   //   "openrouter": [
@@ -32,7 +33,6 @@
     },
   },
   "default_agent": "plan",
-  "theme": "catppuccin",
   "autoupdate": true,
   "instructions": ["rules/*.md"],
   // WARNING: this is a security risk, do not share sessions with anyone automatically.

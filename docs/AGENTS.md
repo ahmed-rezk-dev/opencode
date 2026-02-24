@@ -86,6 +86,7 @@ This directory contains the agents that make up the OpenCode agent ecosystem. Ea
 | nlp-engineer              | Expert NLP engineer specializing in natural language processing, understanding, and generation. Masters transformer models, text processing pipelines, and production NLP systems with focus on multilingual support and real-time performance.                          |
 | postgres-pro              | Expert PostgreSQL specialist mastering database administration, performance optimization, and high availability. Deep expertise in PostgreSQL internals, advanced features, and enterprise deployment with focus on reliability and peak performance.                    |
 | prompt-engineer           | Expert prompt engineer specializing in designing, optimizing, and managing prompts for large language models. Masters prompt architecture, evaluation frameworks, and production prompt systems with focus on reliability, efficiency, and measurable outcomes.          |
+| vision-agent              | Expert vision analysis specialist using Qwen3.5-9B from LM Studio for all visual tasks. Masters image analysis, screenshot interpretation, diagram understanding, OCR, visual QA, and UI inspection. Always use qwen/qwen3.5-9b:2 model for vision requests. |
 
 ### 06-developer-experience
 
