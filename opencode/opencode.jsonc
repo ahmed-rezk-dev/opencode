@@ -22,13 +22,29 @@
         "gemini-2.5-pro": {
           "temperature": true,
         },
-        "gemini-3-pro-preview": {
+        "gemini-3.1-pro-preview": {
           "temperature": true,
         },
       },
       "options": {
         "project": "{env:VERTEXAI_PROJECT_ID}",
         "location": "{env:VERTEXAI_REGION}",
+      },
+    },
+    "anthropic": {
+      "models": {
+        "claude-opus-4-6": {
+          "temperature": true,
+        },
+        "claude-sonnet-4-6": {
+          "temperature": true,
+        },
+        "claude-haiku-4-5": {
+          "temperature": true,
+        },
+      },
+      "options": {
+        "apiKey": "{env:ANTHROPIC_API_KEY}",
       },
     },
   },
@@ -39,70 +55,6 @@
   "share": "manual",
   "plugin": ["@franlol/opencode-md-table-formatter"],
   "mcp": {
-    "docker": {
-      "type": "local",
-      "command": ["uvx", "docker-mcp"],
-      "enabled": false,
-    },
-    "kubernetes": {
-      "type": "local",
-      "command": ["npx", "-y", "kubernetes-mcp-server@latest"],
-      "enabled": false,
-    },
-    "datadog": {
-      "type": "local",
-      "command": ["npx", "-y", "@winor30/mcp-server-datadog"],
-      "enabled": false,
-      "environment": {
-        "DATADOG_API_KEY": "{env:DATADOG_API_KEY}",
-        "DATADOG_APP_KEY": "{env:DATADOG_APP_KEY}",
-        "DATADOG_SITE": "{env:DATADOG_SITE}",
-      },
-    },
-    "gitlab": {
-      "type": "local",
-      "command": [
-        "docker",
-        "run",
-        "-i",
-        "--rm",
-        "--pull=always",
-        "-e",
-        "GITLAB_TOKEN",
-        "registry.gitlab.com/fforster/gitlab-mcp:latest",
-      ],
-      "environment": {
-        "GITLAB_TOKEN": "{env:GITLAB_TOKEN}",
-      },
-      "enabled": false,
-    },
-    "github": {
-      "type": "local",
-      "command": [
-        "docker",
-        "run",
-        "-i",
-        "--rm",
-        "--pull=always",
-        "-e",
-        "GITHUB_PERSONAL_ACCESS_TOKEN",
-        "ghcr.io/github/github-mcp-server",
-      ],
-      "environment": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}",
-      },
-      "enabled": false,
-    },
-    "atlassian": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "mcp-remote",
-        "https://mcp.atlassian.com/v1/sse",
-      ],
-      "enabled": false,
-    },
     "smartplaylist": {
       "type": "remote",
       "url": "http://personal.local:8000/mcp",
